@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<!--suppress XmlPathReference -->
+
+<!--POSLE NEKAD IZBACCI OVU LINIJU KODA 21-->
+<BorderPane fx:id="mainmBorderPain" fx:controller="erkos.notepaderkos.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="New" onAction="#showNewItemDialog"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Save" onAction="#SaveAs" />
+                        <MenuItem text="Save as " onAction="#SaveAs"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Exit" onAction="#handexit"/>
+                    </items>
+                </Menu>
+                <Menu text="Edit">
+                    <MenuItem text="Cut" onAction="#cut"  />
+                    <MenuItem text="Copy" onAction="#copy" />
+                    <MenuItem text="Paste" onAction="#paste"/>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="Erkosabout " onAction="#Test" />
+
+                    </items>
+                </Menu>
+            </MenuBar>
+            <ToolBar>
+                <HBox>
+
+
+                    <Button text="" onAction="#showNewItemDialog">
+                        <graphic>
+                            <ImageView fitWidth="17.0" fitHeight="20.0">
+                                <image>
+                                    <Image url="C:\\Users\\Public\\Documents\\notepaderkos\Icon\\new.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                    <Button  onAction="#SaveAs">
+                        <graphic>
+                            <ImageView fitWidth="17.0" fitHeight="20.0">
+                                <image>
+                                    <Image url="C:\\Users\\Public\\Documents\\notepaderkos\Icon\\save.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+
+                    <Button onAction="#cut">
+                        <graphic>
+                            <ImageView fitWidth="17.0" fitHeight="20.0">
+                                <image>
+                                    <Image url="C:\\Users\\Public\\Documents\\notepaderkos\Icon\\cutbig.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+
+
+
+
+
+
+
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+    <left>
+        <ListView fx:id="todoListView" onKeyReleased="#handleKeyPressed">
+
+        </ListView>
+    </left>
+    <center>
+        <VBox style="-fx-background-color: white">
+            <TextArea fx:id="itemDetailsTextArea" VBox.vgrow="ALWAYS" wrapText="true"/>
+            <HBox>
+                <Label text="Date: " style="-fx-background-color: white">
+                    <font>
+                        <Font name="Times New Roman bold" size="20"/>
+                    </font>
+                </Label>
+                <Label fx:id="deadlineLabel" style="-fx-background-color: white">
+                    <font>
+                        <Font name="Times New Roman bold" size="20"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
+
+
+

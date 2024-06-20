@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<!--suppress XmlPathReference -->
+<?import javafx.scene.image.ImageView?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" >
+    <children>
+        <Label layoutX="14.0" layoutY="41.0" prefHeight="34.0" prefWidth="110.0" text="Erkos 1.0">
+            <font>
+                <Font name="Franklin Gothic Heavy" size="21.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="88.0" fitWidth="139.0" layoutX="460.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="C:\\Users\\Public\\Documents\\notepaderkos\logo\\logo.jpg" />
+            </image>
+        </ImageView>
+        <Line endX="493.0" layoutX="107.0" layoutY="102.0" startX="-100.0" />
+        <TextArea layoutX="11.0" layoutY="105.0" prefHeight="504.0" prefWidth="586.0" text="Product Version&#10;&#10;Build Information&#10;Version 1.0&#10;Date: 2023-23-02 13:53:53&#10;Erkos: 1&#10;Erkos Version: 1">
+            <opaqueInsets>
+                <Insets top="8.0" />
+            </opaqueInsets>
+        </TextArea>
+    </children>
+</AnchorPane>
+
+
+
